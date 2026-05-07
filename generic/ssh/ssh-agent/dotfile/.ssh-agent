@@ -1,0 +1,18 @@
+# Start or reuse ssh-agent
+export SSH_ENV="$HOME/.ssh/agent_env"
+
+start_agent() {
+    echo "Starting new ssh-agent..."
+    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "$SSH_ENV"
+    chmod 600 "$SSH_ENV"
+    source "$SSH_ENV" > /dev/null
+    ssh-add
+}
+
+# Load existing agent if possible
+if [ -f "$SSH_ENV" ]; then
+    source "$SSH_ENV" > /dev/null
+    ps -p "$SSH_AGENT_PID" > /dev/null 2>&1 || start_agent
+else
+    start_agent
+fi

@@ -1,0 +1,28 @@
+# ----------------------
+# Nikolay Kostov aliases
+# ----------------------
+# Navigation
+# ----------------------
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+# ----------------------
+# git
+# ----------------------
+alias gs="git status"
+alias gc="git commit"
+alias ga="git add"
+alias gp="git push"
+alias gnp="git --no-pager"
+# ----------------------
+# terraform
+# ----------------------
+alias think="terraform plan"
+alias tapout="terraform apply --auto-approve"
+alias tap="terraform apply"
+# ----------------------
+# docker
+# ----------------------
+alias d="docker"
+alias dc="docker compose"
+# ----------------------
