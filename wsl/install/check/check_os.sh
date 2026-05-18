@@ -3,6 +3,7 @@
 set -euo pipefail
 
 
+os_check() {
 echo "Checking if OS is supported for Configurator"
 if [ -f "/etc/os-release" ]; then
   . /etc/os-release
@@ -17,4 +18,4 @@ else
   echo "/etc/os-release not found, unable to determine OS"
   exit 1
 fi
-
+}
