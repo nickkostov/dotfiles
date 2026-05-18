@@ -14,8 +14,9 @@ alias gc="git commit"
 alias ga="git add"
 alias gp="git push"
 alias gnp="git --no-pager"
+alias gl="git log --oneline --graph --decorate --all"
 # ----------------------
-# terraform
+# Terraform
 # ----------------------
 alias think="terraform plan"
 alias tapout="terraform apply --auto-approve"
