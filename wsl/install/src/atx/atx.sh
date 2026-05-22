@@ -30,7 +30,6 @@ else
 fi
 
 
-atx_install() {
 if [ -f "$HOME/.local/bin/atx" ]; then
   echo "ATX (AWS Transform CLI is already installed)"
   exit 0
@@ -53,4 +52,3 @@ else
     zsh -c "source ~/.zshrc"
   fi
 fi
-}
