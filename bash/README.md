@@ -1,1 +1,1 @@
-# If I decide to use bash
+# Configurations specific to my bash environment

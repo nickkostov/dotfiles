@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    eval $(ssh-agent -s)
+    ssh-add /home/${USER}/.ssh/${KEY}
+fi
+# Makes promtp pretty
+source ${HOME}/.prompt
+
+# Homebrew configuration:
+if [ -d /home/linuxbrew/ ]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    echo "Brew Package Manager Activated"
+else
+    echo "No brew installation"
+fi
