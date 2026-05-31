@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+
+# ----------------------
+# Nikolay Kostov's aliases
+# GitHub https://github.com/nickkostov/dotfiles
+# ----------------------
+
+alias tapout="terraform apply --auto-approve"
+alias think="terraform plan"
+alias tg="terragrunt"
+
+## Kubernetes:
+### Everything should have the required namespace/component
+alias k="kubectl"
+alias kpods="kubectl get pods"
+alias klog="kubectl logs"
+alias knode="kubectl get nodes"
+
+## Docker
+alias dc="docker compose"
+alias docker-compose="docker compose"
+alias d="docker"
+
+## SSH via Jump Host:
+alias jump="ssh -J"
+
+# Directive
+alias ll="ls -la"                   # Detailed file list
+alias la="ls -A"                    # List all files, including hidden
+alias l="ls -CF"                    # Compact list
+alias ..="cd .."                    # Go up one directory
+alias ...="cd ../.."                # Go up two directories
+alias c="clear"                     # Clear terminal screen
+alias reload_zsh="source ~/.zshrc"  # Reload zsh configuration
+alias reload_bash="source ~/.bashrc"
+alias edit="code ."                 # Open current folder in VSCode
+alias path="echo '${PATH}'"         # Show PATH variable
+
+## Git Aliases:
+alias gs="git status"        # Check current repo status
+alias ga="git add"           # Add files to staging
+alias gc="git commit"        # Commit staged changes
+alias gcm="git commit -m"    # Commit with a message
+alias gp="git push"          # Push changes to remote
+alias gpl="git pull"         # Pull changes from remote
+alias gb="git branch"        # List branches
+alias gco="git checkout"     # Switch branches
+alias gl="git log --oneline --graph --decorate --all"  # Detailed log
+alias gd="git diff"          # Show changes
+alias grh="git reset --hard" # Hard reset
+alias gstash="git stash"     # Stash changes
+alias grm="git rm"           # Remove files from repo
+
+# Misc
+
+alias myip="curl ifconfig.me"         # Check public IP
+alias ports="netstat -tuln"           # Check open ports
+alias mem="free -h"                   # Show memory usage
+alias cpu="lscpu"                     # Show CPU details
+alias df="df -h"                      # Disk usage summary
