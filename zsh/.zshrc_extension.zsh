@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+# Additional zsh configurations
+
 # Homebrew configuration
 
 if [[ -d /home/linuxbrew/ ]]; then
