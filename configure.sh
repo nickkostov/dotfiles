@@ -1,9 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+set -euo pipefail
 
-current_path=$(pwd)
-
-configure_aliases_bash() {
-  echo ". $current_path/.aliases" >> $HOME/.bashrc
-  [[ -f "$current_path/.aliases" ]] && echo ". $current_path/.aliases" >> $HOME/.zshrc_extension.zsh
-}
-configure_aliases
+"$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/install/bootstrap.sh"
