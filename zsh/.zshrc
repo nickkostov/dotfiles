@@ -22,5 +22,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 eval "$(starship init zsh)"
 # Load History Config
 
-. .zsh_history_config.zsh
-. .zshrc_extension.zsh
+
+[[ -f "$HOME/.zsh_history_config.zsh" ]] && . "$HOME/.zsh_history_config.zsh"
+[[ -f "$HOME/.zshrc_extension.zsh" ]] && . "$HOME/.zshrc_extension.zsh"
