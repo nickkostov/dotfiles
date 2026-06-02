@@ -1,5 +1,16 @@
 #!/usr/bin/env bash
+
+# Add individual key here.
+KEY=""
 if [ -z "$SSH_AUTH_SOCK" ]; then
     eval $(ssh-agent -s)
-    ssh-add /home/${USER}/.ssh/${KEY}
+    ssh-add /home/${USER}/.ssh/
 fi
+#
+
+eval "$(ssh-agent -s)"
+
+for key in ~/.ssh/*; do
+    [ -f "$key" ] || continue
+    ssh-add "$key" 2>/dev/null
+done
