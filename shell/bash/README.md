@@ -1,0 +1,1 @@
+# Configurations specific to my bash environment

@@ -1,0 +1,15 @@
+[user]
+name = nickkostov
+email = 35745114+nickkostov@users.noreply.github.com
+[core]
+editor = vim
+[color "diff"]
+meta = yellow bold
+frag = magenta bold
+old = red bold
+new = green bold
+whitespace = red reverse
+[color "status"]
+added = green bold
+changed = yellow bold
+untracked = red bold
